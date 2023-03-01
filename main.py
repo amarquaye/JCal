@@ -7,10 +7,12 @@ def main(page: ft.Page):
     """Main App"""
 
     page.title = "JCal"
-    page.theme_mode = "Light"
+    page.theme_mode = "light"
     page.padding = 20 
     page.vertical_alignment = "center"
     page.horizontal_alignment = "center"
+    page.window_max_height = 600
+    page.window_max_width = 400
 
     
 
@@ -29,7 +31,7 @@ def main(page: ft.Page):
     def calculate(e):
         """Function to display calculated data"""
         
-        output = eval(calc_input.value),
+        output = eval(calc_input.value)
         calc_input.value = output
         page.add(calc_input)
         
